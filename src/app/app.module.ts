@@ -10,6 +10,9 @@ import { ProductComponent } from './product/product.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductAddComponent } from './product-add/product-add.component';
+import { ProductViewComponent } from './product-view/product-view.component';
 
 @NgModule({
   imports: [
@@ -24,6 +27,9 @@ import { AppRoutingModule } from './app-routing.module';
     ContactComponent,
     ProductComponent,
     LoginComponent,
+    ProductAddComponent,
+    ProductEditComponent,
+    ProductViewComponent,
   ],
   bootstrap: [AppComponent],
 })
