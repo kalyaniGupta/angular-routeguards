@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 import { ProductComponent } from './product/product.component';
 import { AuthGuardService } from './_services/auth-guard.service';
 
@@ -15,5 +16,6 @@ export const AppRoutingModule: Routes = [
     component: ProductComponent,
     canActivate: [AuthGuardService],
   },
+  { path: 'logout', component: LogoutComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];

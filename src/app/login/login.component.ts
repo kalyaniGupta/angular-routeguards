@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   invalidCredentialMsg: string;
   username: string;
   password: string;
-  retUrl: string = 'home';
+  returnUrl: string = 'home';
 
   constructor(
     private authService: AuthService,
@@ -22,8 +22,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.queryParamMap.subscribe((params) => {
-      this.retUrl = params.get('retUrl');
-      console.log('LoginComponent/ngOnInit ' + this.retUrl);
+      this.returnUrl = params.get('returnUrl');
+      console.log('LoginComponent/ngOnInit ' + this.returnUrl);
     });
   }
 
@@ -31,9 +31,9 @@ export class LoginComponent implements OnInit {
     this.authService
       .login(loginForm.value.username, loginForm.value.password)
       .subscribe((data) => {
-        console.log('return to ' + this.retUrl);
-        if (this.retUrl != null) {
-          this.router.navigate([this.retUrl]);
+        console.log('return to ' + this.returnUrl);
+        if (this.returnUrl != null) {
+          this.router.navigate([this.returnUrl]);
         } else {
           this.router.navigate(['home']);
         }

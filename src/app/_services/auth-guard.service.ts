@@ -22,9 +22,6 @@ export class AuthGuardService {
 
       this.router.navigate(['login'], { queryParams: { retUrl: route.url } });
       return false;
-
-      //var urlTree = this.router.createUrlTree(['login']);
-      //return urlTree;
     }
 
     return true;
