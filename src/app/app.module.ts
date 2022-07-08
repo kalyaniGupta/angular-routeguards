@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductViewComponent } from './product-view/product-view.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { ProductViewComponent } from './product-view/product-view.component';
     ProductAddComponent,
     ProductEditComponent,
     ProductViewComponent,
+    LogoutComponent,
   ],
   bootstrap: [AppComponent],
 })

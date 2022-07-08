@@ -11,6 +11,9 @@ import { ProductComponent } from './product/product.component';
 
 import { AuthGuardService } from './_services/auth-guard.service';
 
+// const admindModule = () =>
+//   import('./admin/admin/admin.module').then((x) => x.AdminModule);
+
 export const AppRoutingModule: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
@@ -26,6 +29,7 @@ export const AppRoutingModule: Routes = [
       { path: 'add', component: ProductAddComponent },
     ],
   },
+
   { path: 'logout', component: LogoutComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
